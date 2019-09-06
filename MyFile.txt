@@ -1,0 +1,662 @@
+  <html>
+	<head>
+		<title>Circle Wise Daily RainFall</title>
+		<Script language='javascript'>window.history.forward(1);</Script>
+<script type="text/javaScript" > var a=navigator.onLine; if(!a)
+{ window.location.assign("RFErrorPage.php"); } </script>
+
+
+
+<style>
+	input.hmenu {width: 100%; background-color: #b3e6b3; border-width: 0px; font-family: Tahoma; font-size: 15px; font-weight: bold; color: brown; text-align: left; font-weight: bold;}
+	input.mmenu {width: 100%; background-color: #339933; border-width: 1px; border-color: #FFEFD5; font-size: 13px; text-align: left; font-weight: bold; color: black;}
+	input.smenu {width: 100%; background-color: #b3e6b3; border-width: 1px; border-color: #FFEFD5; font-size: 13px; text-align: left; color: brown;}	
+	body.dark {background-color: #339933;}
+	body.faint {background-color: #b3e6b3;}
+	table.formtb {border: outset 1px; border-collapse: collapse; margin-left: 10px; margin-right: 10px}
+	table.formtb tr {height: 20px}
+	table.formtb td {border: 0px solid black; padding: 5px}
+	table.butntb {border: outset 0px; border-collapse: collapse; margin-left: 10px; margin-right: 10px}
+	table.butntb tr {height: 20px}
+	table.butntb td {border: 0px solid black; padding: 20px}
+	table.seletb {border: outset 0px; border-collapse: collapse; margin-left: 10px; margin-right: 10px}
+	table.seletb tr {height: 20px}
+	table.seletb td {border: 0px solid black; padding: 5px}
+	table.disptb {border: outset 1px; border-collapse: collapse; margin-left: 10px; margin-right: 10px; font-family: Arial; font-size: 15px}
+	table.disptb tr {height: 17px}
+	table.disptb td {border: outset 1px; padding: 3px}
+	table.prnttb {border: outset 0px; border-collapse: collapse; margin-left: 10px; margin-right: 10px}
+	table.prnttb td {border: 1px solid black; padding: 5px}
+	font.f1 {font-family: Tahoma; font-size: 12px; font-weight: bold; color: brown; background-color: ;}
+	a.a1 {color: #f1f72a; background-color: ;}
+	p.p0 {text-align: left; font-family: Tahoma; font-size: 25px; font-weight: light; color: brown}
+	p.p9 {text-align: left; font-family: Tahoma; font-size: 15px; font-weight: bold; color: brown; background-color: ;}
+	h.h9 {text-align: left; font-family: Tahoma; font-size: 15px; font-weight: bold; color: brown; background-color: ;}
+	p.p1 {text-align: left; font-family: Tahoma; font-size: 12px; font-weight: light; color: darkblue; text-transform: }
+	p.p2 {text-align: left; font-family: Arial; font-size: 15px; font-weight: bold}
+	p.pc {text-align: left; font-family: Tahoma; font-size: 11px; }
+</style>
+	</head>
+	<body onmousedown='return false;' onselectstart='return false;'>
+						<p class="p2"><center><b>Circlewise Daily Rainfall (in m.m.) of Ahamadnagar District for the month of May-1997</b></center></p><br/>
+				
+<table class="disptb" id="tableID" >
+	<tr height='50'>
+		<td width='50'><b>Sr</b></td>
+		<td width='50'><b>District</b></td>
+		<td width='50'><b>Taluka</b></td>
+		<td width='50'><b>Circle</b></td>
+        <td width='50'><b>Taluka Normal RainFall</b></td>
+				         <td width='50'><b>1</b></td>
+				         <td width='50'><b>2</b></td>
+				         <td width='50'><b>3</b></td>
+				         <td width='50'><b>4</b></td>
+				         <td width='50'><b>5</b></td>
+				         <td width='50'><b>6</b></td>
+				         <td width='50'><b>7</b></td>
+				         <td width='50'><b>8</b></td>
+				         <td width='50'><b>9</b></td>
+				         <td width='50'><b>10</b></td>
+				         <td width='50'><b>11</b></td>
+				         <td width='50'><b>12</b></td>
+				         <td width='50'><b>13</b></td>
+				         <td width='50'><b>14</b></td>
+				         <td width='50'><b>15</b></td>
+				         <td width='50'><b>16</b></td>
+				         <td width='50'><b>17</b></td>
+				         <td width='50'><b>18</b></td>
+				         <td width='50'><b>19</b></td>
+				         <td width='50'><b>20</b></td>
+				         <td width='50'><b>21</b></td>
+				         <td width='50'><b>22</b></td>
+				         <td width='50'><b>23</b></td>
+				         <td width='50'><b>24</b></td>
+				         <td width='50'><b>25</b></td>
+				         <td width='50'><b>26</b></td>
+				         <td width='50'><b>27</b></td>
+				         <td width='50'><b>28</b></td>
+				         <td width='50'><b>29</b></td>
+				         <td width='50'><b>30</b></td>
+				         <td width='50'><b>31</b></td>
+				<td width='50'><b>Total RainFall</b></td>
+		<td width='50'><b>%RainFall</b></td>
+		<td><b>Rainy Days</b></td>
+	</tr>
+			  	<tr>
+		  	<td>1</td>
+		  	<td>Ahamadnagar</td>
+		  	<td>Nagar</td>
+		  	<td>Sawedi</td>
+		  	<td>25.3</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>2</td>
+		  	<td></td>
+		  	<td>Parner</td>
+		  	<td>Parner</td>
+		  	<td>25.9</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>3</td>
+		  	<td></td>
+		  	<td>Shrigonda</td>
+		  	<td>Shrigonda</td>
+		  	<td>21.7</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>4</td>
+		  	<td></td>
+		  	<td>Karjat</td>
+		  	<td>Karjat</td>
+		  	<td>25.2</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>5</td>
+		  	<td></td>
+		  	<td>Jamkhed</td>
+		  	<td>Jamkhed</td>
+		  	<td>19.8</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>6</td>
+		  	<td></td>
+		  	<td>Shegaon</td>
+		  	<td>Shevgaon</td>
+		  	<td>17.2</td> 
+		  						<td>8.0</td>
+	   	   	  		    				<td>9.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>17</td>
+	    			<td>85</td>
+	    			<td>2</td>
+        			</tr>		  	<tr>
+		  	<td>7</td>
+		  	<td></td>
+		  	<td>Pathardi</td>
+		  	<td>Pathardi</td>
+		  	<td>20.0</td> 
+		  						<td>24.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>24</td>
+	    			<td>153.8</td>
+	    			<td>1</td>
+        			</tr>		  	<tr>
+		  	<td>8</td>
+		  	<td></td>
+		  	<td>Newasa</td>
+		  	<td>NewasaKh</td>
+		  	<td>15.6</td> 
+		  						<td>8.0</td>
+	   	   	  		    				<td>9.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>17</td>
+	    			<td>106.9</td>
+	    			<td>2</td>
+        			</tr>		  	<tr>
+		  	<td>9</td>
+		  	<td></td>
+		  	<td>Rahuri</td>
+		  	<td>Rahuri</td>
+		  	<td>15.9</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>10</td>
+		  	<td></td>
+		  	<td>Sangamner</td>
+		  	<td>Sangamner</td>
+		  	<td>17.0</td> 
+		  						<td>0.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>0</td>
+	    			<td>0</td>
+	    			<td>0</td>
+        			</tr>		  	<tr>
+		  	<td>11</td>
+		  	<td></td>
+		  	<td>Akola</td>
+		  	<td>Akole</td>
+		  	<td>21.9</td> 
+		  						<td>2.0</td>
+	   	   	  		    				<td>10.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>12</td>
+	    			<td>81.1</td>
+	    			<td>1</td>
+        			</tr>		  	<tr>
+		  	<td>12</td>
+		  	<td></td>
+		  	<td>Kopargaon</td>
+		  	<td>Kopargaon</td>
+		  	<td>14.8</td> 
+		  						<td>15.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>15</td>
+	    			<td>64.7</td>
+	    			<td>1</td>
+        			</tr>		  	<tr>
+		  	<td>13</td>
+		  	<td></td>
+		  	<td>Shrirampur</td>
+		  	<td>Shrirampur</td>
+		  	<td>23.2</td> 
+		  						<td>6.0</td>
+	   	   	  		    				<td>2.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  
+	    			<td>8</td>
+	    			<td>54.1</td>
+	    			<td>1</td>
+        			</tr>		  	<tr>
+		  	<td>14</td>
+		  	<td></td>
+		  	<td>Rahata</td>
+		  	<td>Rahata</td>
+		  	<td>14.8</td> 
+		  						<td>15.0</td>
+	   	   	  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  		    				<td>0.0</td>
+				  	<td>15</td>
+    <td>101.4</td>
+	<td>1</td>
+    </tr></table>
+
+
+	</body>
+</html>

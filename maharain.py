@@ -30,12 +30,18 @@ driver.find_element_by_xpath("//input[@type='button' and @value='Daily Rain']").
 driver.switch_to.default_content()
 
 driver.switch_to.frame("ContentFrame")
+selyear = 1998
+selstate = "Maharashtra"
+seldist = "Nasik"
+selmonth = "June"
+# Select(driver.find_element_by_name("selyear")).select_by_index(1)
+Select(driver.find_element_by_name("selyear")).select_by_visible_text('1998')
 
-Select(driver.find_element_by_name("selyear")).select_by_index(1)
 Select(driver.find_element_by_name("selstate")).select_by_index(1)
 Select(driver.find_element_by_name("seldist")).select_by_index(1)
 Select(driver.find_element_by_name("selmonth")).select_by_index(1)
 
+year = driver.find_element_by_name("selyear").get_attribute("attribute name")
 driver.find_element_by_name("btnshow").click()
 
 driver.get('view-source:http://maharain.gov.in/RainPastDailyMonth.php')
@@ -93,6 +99,33 @@ result = r.selection_get(selection = "CLIPBOARD")
 r.clipboard_clear()
 r.destroy
 print(result)
-file1 = open("MyFile.txt","w")
-file1.write(result) 
-file1.close()
+
+
+soup = bs.BeautifulSoup(result,'lxml')
+
+print(soup)
+
+
+table = soup.find("table")
+import csv
+
+
+table = soup.find("table")
+
+output_rows = []
+for table_row in table.findAll('tr'):
+    columns = table_row.findAll('td')
+    output_row = []
+    for column in columns:
+        output_row.append(column.text)
+    output_rows.append(output_row)
+    
+with open(str(selyear) + "_"+ selstate + "_" + seldist + "_" + selmonth + ".csv","w") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerows(output_rows)
+
+driver.close()
+
+# file1 = open(str(selyear) + "_"+ selstate + "_" + seldist + "_" + selmonth + ".html","w")
+# file1.write(result) 
+# file1.close()

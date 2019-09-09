@@ -10,41 +10,111 @@ from urllib.request import urlopen
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
 # from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.support.ui import Select
 # binary = FirefoxBinary('/usr/bin/firefox')
 
-driver = webdriver.Firefox(executable_path='./geckodriver')
+from tkinter import Tk
+from time import sleep
+import csv
 
-driver.get('http://maharain.gov.in')
+
 # driver.maximize_window()
 
 
 # driver.find_element_by_css_selector(".mmenu[value='PastQueriesCirclewise6']").click()
 # driver.find_element_by_xpath("//input[@type='submit' and @value='PastQueriesCirclewise6']").click()
-driver.switch_to.frame("MenuFrame")
-driver.find_element_by_name("PastQueriesCirclewise6").click()
-driver.find_element_by_xpath("//input[@type='button' and @value='Daily Rain']").click()
+
 #selecting  dropdown 
 
-driver.switch_to.default_content()
 
-driver.switch_to.frame("ContentFrame")
-selyear = 1998
-selstate = "Maharashtra"
-seldist = "Nasik"
-selmonth = "June"
+# selyear = [1998]
+# selstate = "Maharashtra"
+# seldist = "Nasik"
+# selmonth = "June"
+
+
+# selyears = ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"]
+selstates = "Maharashtra"
+seldists = "Nasik"
+selmonths = ["May","June","July","August","September","October","November","December"]
+# selmonths = ["July"]
+selyears = ["2011","2012","2013","2014","2015","2016","2017"]
+
+driver = webdriver.Firefox(executable_path='./geckodriver')
+
+
+for year in selyears:
+    for month in selmonths:
+
+        driver.get('http://maharain.gov.in')
+        sleep(2) 
+
+        driver.switch_to.frame("MenuFrame")
+        driver.find_element_by_name("PastQueriesCirclewise6").click()
+        driver.find_element_by_xpath("//input[@type='button' and @value='Daily Rain']").click()
+
+        driver.switch_to.default_content()
+
+        driver.switch_to.frame("ContentFrame")
+        sleep(2) 
+
+        Select(driver.find_element_by_name("selyear")).select_by_visible_text(year)
+        Select(driver.find_element_by_name("selstate")).select_by_visible_text(selstates)
+        Select(driver.find_element_by_name("seldist")).select_by_visible_text(seldists)
+        Select(driver.find_element_by_name("selmonth")).select_by_visible_text(month)
+        
+        driver.find_element_by_name("btnshow").click()
+        driver.get('view-source:http://maharain.gov.in/RainPastDailyMonth.php')
+
+        elem = driver.find_element_by_tag_name("body")
+        elem.send_keys("bar")
+        elem.send_keys(Keys.CONTROL, 'a') #highlight all in box
+        elem.send_keys(Keys.CONTROL, 'c') #copy
+
+        # html = driver.page_source
+        # print(html)
+        r = Tk()
+
+        r.withdraw()
+
+        while not r.selection_get(selection="CLIPBOARD"):
+            sleep(0.1)
+
+        result = r.selection_get(selection = "CLIPBOARD")
+        print(result)
+        # r.clipboard_clear()
+        soup = bs.BeautifulSoup(result,'lxml')
+
+        table = soup.find("table")
+        if(table):
+            output_rows = []
+            for table_row in table.findAll('tr'):
+                columns = table_row.findAll('td')
+                output_row = []
+                for column in columns:
+                    output_row.append(column.text)
+                output_rows.append(output_row)
+                
+            with open(str(year) + "_"+ selstates + "_" + seldists + "_" + month + ".csv","w") as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerows(output_rows)
+
+
+        # r.destroy
+        # driver.close()
+
+        # (str(year) + "_"+ selstate + "_" + seldist + "_" + month + ".html\n")
+
+
+
 # Select(driver.find_element_by_name("selyear")).select_by_index(1)
-Select(driver.find_element_by_name("selyear")).select_by_visible_text('1998')
 
-Select(driver.find_element_by_name("selstate")).select_by_index(1)
-Select(driver.find_element_by_name("seldist")).select_by_index(1)
-Select(driver.find_element_by_name("selmonth")).select_by_index(1)
 
-year = driver.find_element_by_name("selyear").get_attribute("attribute name")
-driver.find_element_by_name("btnshow").click()
+# year = driver.find_element_by_name("selyear").get_attribute("attribute name")
 
-driver.get('view-source:http://maharain.gov.in/RainPastDailyMonth.php')
 
 # table_id = inputElement = driver.find_element_by_id("tableID")
 # driver.find_element_by_tag_name("table")
@@ -78,54 +148,25 @@ driver.get('view-source:http://maharain.gov.in/RainPastDailyMonth.php')
 # pyautogui.rightClick(406, 856)
 # pyautogui.moveTo(501, 762, duration=0.01)
 # pyautogui.rightClick(10, 5)
-html = driver.page_source
-
-from selenium.webdriver.common.keys import Keys
-
-elem = driver.find_element_by_tag_name("body")
-elem.send_keys("bar")
-elem.send_keys(Keys.CONTROL, 'a') #highlight all in box
-elem.send_keys(Keys.CONTROL, 'c') #copy
-
-from tkinter import Tk
-from time import sleep
-r = Tk()
-r.withdraw()
-
-while not r.selection_get(selection="CLIPBOARD"):
-    sleep(0.1)
-
-result = r.selection_get(selection = "CLIPBOARD")
-r.clipboard_clear()
-r.destroy
-print(result)
 
 
-soup = bs.BeautifulSoup(result,'lxml')
-
-print(soup)
 
 
-table = soup.find("table")
-import csv
+
+# print(result)
 
 
-table = soup.find("table")
 
-output_rows = []
-for table_row in table.findAll('tr'):
-    columns = table_row.findAll('td')
-    output_row = []
-    for column in columns:
-        output_row.append(column.text)
-    output_rows.append(output_row)
-    
-with open(str(selyear) + "_"+ selstate + "_" + seldist + "_" + selmonth + ".csv","w") as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerows(output_rows)
+# print(soup)
 
-driver.close()
+
+
+
+
+# driver.close()
 
 # file1 = open(str(selyear) + "_"+ selstate + "_" + seldist + "_" + selmonth + ".html","w")
 # file1.write(result) 
 # file1.close()
+
+

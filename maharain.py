@@ -36,12 +36,13 @@ import csv
 # selmonth = "June"
 
 
-# selyears = ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"]
+# selyears = ["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"]
+selyears = ["2012","2013","2014","2015","2016","2017","2018"]
 selstates = "Maharashtra"
 seldists = "Nasik"
-selmonths = ["May","June","July","August","September","October","November","December"]
-# selmonths = ["July"]
-selyears = ["2011","2012","2013","2014","2015","2016","2017"]
+selmonths = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+# selmonths = ["October","November","December"]
+# selyears = ["2018"]
 
 driver = webdriver.Firefox(executable_path='./geckodriver')
 
@@ -53,7 +54,7 @@ for year in selyears:
         sleep(2) 
 
         driver.switch_to.frame("MenuFrame")
-        driver.find_element_by_name("PastQueriesCirclewise6").click()
+        driver.find_element_by_name("PastQueriesTehsilwise6").click()
         driver.find_element_by_xpath("//input[@type='button' and @value='Daily Rain']").click()
 
         driver.switch_to.default_content()
@@ -62,13 +63,12 @@ for year in selyears:
         sleep(2) 
 
         Select(driver.find_element_by_name("selyear")).select_by_visible_text(year)
-        Select(driver.find_element_by_name("selstate")).select_by_visible_text(selstates)
-        Select(driver.find_element_by_name("seldist")).select_by_visible_text(seldists)
+        # Select(driver.find_element_by_name("selstate")).select_by_visible_text(selstates)
+        # Select(driver.find_element_by_name("seldist")).select_by_visible_text(seldists)
         Select(driver.find_element_by_name("selmonth")).select_by_visible_text(month)
         
         driver.find_element_by_name("btnshow").click()
-        driver.get('view-source:http://maharain.gov.in/RainPastDailyMonth.php')
-
+        driver.get('view-source:http://maharain.gov.in/RainPastDailyTehsilMonth.php')
         elem = driver.find_element_by_tag_name("body")
         elem.send_keys("bar")
         elem.send_keys(Keys.CONTROL, 'a') #highlight all in box
